@@ -44,9 +44,14 @@
      ButtonType = YESNO
      Title 	= %ADD_1%
 
-
   .References
      rundll32 syssetup,SetupInfObjectInstallAction DefaultInstall 128 C:\INFPS.inf
+     
+     
+  .ReferencesBlog
+      https://github.com/homjxi0e/APT
+     
+     
 #>
 
 function invoke-Backdoors {
