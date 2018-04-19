@@ -1,7 +1,8 @@
 <#
  .Author Matt Homjxi0e @matthomjxiex02x
  .License PS Not More 
-  Optional Dependencies None 
+ .Optional Dependencies: None 
+ .Required Dependencies: None
  
  
  .Synopsis
