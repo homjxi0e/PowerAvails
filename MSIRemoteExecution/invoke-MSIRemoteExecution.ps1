@@ -16,8 +16,6 @@
 #>
 function invoke-MSIExecutionRemote {
 
-
-
     [CmdletBinding()]
 
         param (
@@ -27,15 +25,12 @@ function invoke-MSIExecutionRemote {
               [Parameter(Position = 0, ParameterSetName = 'URL')]
     
                        [String]$URL,$Local
-        
  )
-
-   if ($like = $URL) {
+  
+  if ($like = $URL) {
    
         $DragURL = "$URL"
-       $RemoreMSI =  msiexec.exe /i $URL 
-                    
-   
+       $RemoreMSI =  msiexec.exe /i $URL                   
    }
 
 }
