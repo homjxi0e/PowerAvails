@@ -1,0 +1,2 @@
+ &- msiexec.exe /passive /i C:\testing.msi /norestart
+ &- msiexec.exe /i C:\testing.msi /norestart
