@@ -338,6 +338,7 @@ function invoke-Confusions-LLMTCOMCLSID {
     if ($null = $PSCmdlet) {
 
    try {
+   $addValue = $CLSIDCOM
    $COMEx = [Activator]::CreateInstance([type]::GetTypeFromCLSID("$CLSIDCOM")) 
  
   } Catch {
