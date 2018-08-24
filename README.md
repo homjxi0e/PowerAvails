@@ -4,8 +4,6 @@
 
 *   invoke-ConfusionJS -Command 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
 *   invoke-Confusions-LLMTCOMCLSID -CLSID 
-*   invoke-ConfusionJS -Command 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
-*   invoke-Confusions-LLMTCOMCLSID -CLSID 
 *   invoke-SCTExecution -SCT 
 *   invoke-DLLLaunchApplication -CML calc.exe
 *   invoke-lateralmovement -Command calc.exe
