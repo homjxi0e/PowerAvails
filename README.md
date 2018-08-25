@@ -14,4 +14,8 @@
    *   invoke-ApplicationShellExecute -CML calc.exe  
    *   invoke-ADinfo -Type List    
    *   Get-TokenMsftEdge -Type List    
-   *    invoke-URLPSShell -URI URL!
+   *   invoke-URLPSShell -URI URL!
+
+![capture3](https://user-images.githubusercontent.com/25440152/44618407-64c3e580-a875-11e8-9279-da4262184adb.PNG)
+
+
