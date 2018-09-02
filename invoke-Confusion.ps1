@@ -280,18 +280,8 @@ function invoke-help {
 13 invoke-URLPSShell -URI URL!    
 
         "
-
     }
-
-
-
-
-
-
-
-
 }
-
 
 
 function invoke-URLPSShell {
