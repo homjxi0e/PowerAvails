@@ -186,23 +186,6 @@ Read-Host -Prompt Enter
    }
 
 
-
-function invoke-help {
-
-
-
-    [Cmdlet]
-
-
-
-
-
-
-
-
-}
-
-
 function invoke-GenerateObf {
 
  <#
