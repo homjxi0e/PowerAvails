@@ -231,7 +231,7 @@ function invoke-GenerateObf {
       }Catch {
       
       
-      throw "Write-Host 'Mistake because input inside Your Strings ' "
+      throw "Write-Host 'Mistake because input Your Strings ' "
       
       }
     
