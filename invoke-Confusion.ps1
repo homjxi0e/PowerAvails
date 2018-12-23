@@ -47,7 +47,7 @@
 
 
   .Description
-      Adaptive confusions Powershell about attacking places secure from some products Microsoft with of some of the executive methods of the system
+      Adaptive confusion Powershell about attacking places secure from some products Microsoft with of some of the executive methods of the system
  
   .Broadly
     This make your edge progressively advanced About Attacks Powershell
