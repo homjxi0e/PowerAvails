@@ -41,7 +41,7 @@
 
  
   .Author ( @harr0ey ) 
-  .License BSD3 
+  .License not yet 
   .Required Dependencies: None
   .Optional Dependencies: None
 
